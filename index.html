@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Drum Machine</title>
+</head>
+<body>
+    <div id="drum-machine">
+        <div id="display">
+        
+        </div>
+
+        <div id="drums">
+            <button id="Qpad" class="drum-pad" onclick="playAudio('Q')">
+                Q<audio src="./drumsounds/Heater-1.mp3" class="clip" id="Q"></audio>
+            </button>
+            <button id="Wpad" class="drum-pad" onclick="playAudio('W')">
+                W <audio src="./drumsounds/Heater-2.mp3" class="clip" id="W"></audio>    
+            </button>
+            <button id="Epad" class="drum-pad" onclick="playAudio('E')">
+                E <audio src="./drumsounds/Heater-3.mp3" class="clip" id="E"></audio>
+            </button>
+            <button id="Apad" class="drum-pad" onclick="playAudio('A')">
+                A <audio src="./drumsounds/Heater-4_1.mp3" class="clip" id="A"></audio>
+            </button>
+            <button id="Spad" class="drum-pad" onclick="playAudio('S')">
+                S <audio src="./drumsounds/Heater-6.mp3" class="clip" id="S"></audio>
+            </button>
+            <button id="Dpad" class="drum-pad" onclick="playAudio('D')">
+                D <audio src="./drumsounds/Kick_n_Hat.mp3" class="clip" id="D"></audio>
+            </button>
+            <button id="Zpad" class="drum-pad" onclick="playAudio('Z')">
+                Z <audio src="./drumsounds/RP4_KICK_1.mp3" class="clip" id="Z"></audio>
+            </button>
+            <button id="Xpad" class="drum-pad" onclick="playAudio('X')">
+                X <audio src="./drumsounds/Cev_H2.mp3" class="clip" id="X"></audio>
+            </button>
+            <button id="Cpad" class="drum-pad" onclick="playAudio('C')">
+                C <audio src="./drumsounds/Dsc_Oh.mp3" class="clip" id="C"></audio>
+            </button>
+        </div>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<script>
+    document.addEventListener("keydown", function(event) {
+    const audio = document.querySelector(`audio[id="${event.key.toUpperCase()}"]`);
+    if (audio) {
+        audio.currentTime = 0;
+        audio.play();
+        const display = document.getElementById("display");
+        display.textContent = audio.id;
+    }
+    });
+
+    function playAudio(key) {
+    const audio = document.getElementById(key);
+    if (audio) {
+        audio.currentTime = 0;
+        audio.play();
+        const display = document.getElementById("display");
+        display.textContent = audio.id;
+    }
+    }
+</script>
+</body>
+</html>

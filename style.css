@@ -1,0 +1,114 @@
+:root {
+    --drumblue: #0FB2F0;
+    --drumpink: #F00FB2;
+    --drumgreen: #B2F00F;
+    --drumdarkblue: #0F42F0;
+    --drumdarkgreen: #0FF0BE;
+}
+
+body {
+    display: flex;
+    background-color: var(--drumpink); 
+    justify-content: center;
+    align-content: center;
+}
+
+#display {
+    height: 20%;
+    width: 80%;
+    background-color: var(--drumdarkblue);
+    align-self: center;
+    text-align: center;
+    vertical-align: baseline;
+}
+#drums {
+    display:inline-grid;
+    width: auto;
+    align-self: center;
+    height: 60%;
+    background-color: var(--drumblue);
+    margin: 10px;
+}
+
+#drum-machine {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 700px;
+    height: 350px;
+    align-self: center;
+    padding: 20px;
+    background-color: var(--drumblue)
+    
+}
+
+.drum-pad {
+    width: 140px;
+    height: 65px;
+    margin: 12px;
+    padding: 20px;
+    background-color: var(--drumgreen);
+}
+
+#Qpad {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#Wpad {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#Epad {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#Apad {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#Spad {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#Dpad {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#Zpad {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:3;
+    grid-row-end: 4;
+}
+
+#Xpad {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start:3;
+    grid-row-end: 4;
+}
+
+#Cpad {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start:3;
+    grid-row-end: 4;
+}
